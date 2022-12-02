@@ -38,18 +38,21 @@ class LandingPage extends React.Component {
             return (
                 <div>
                     <h1> Waiting for game to start...</h1>
+                    <h5>https://github.com/mDOX98/creative-project-5.git</h5>
                 </div>);
         } else {
             if (this.state.client.disconnected) {
                 return (
                     <div>
                         <h1> PLAYER DISCONNECTED...</h1>
+
                     </div>);
             }
             if (this.state.client.me === undefined && this.state.client.winner === undefined) {
                 return (
                     <div>
                         <h1> Waiting for game to start...</h1>
+                        <h5>https://github.com/mDOX98/creative-project-5.git</h5>
                     </div>);
             } else if (this.state.client.me === undefined) {
                 return (
@@ -78,6 +81,8 @@ class LandingPage extends React.Component {
                     <h2>HP = {this.state.client.opponent.hp}</h2>
 
                     {ReadySection}
+
+
                 </div>);
         }
 
